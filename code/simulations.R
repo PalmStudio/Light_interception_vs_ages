@@ -34,7 +34,7 @@ Ages%>%
 # Plot the outputs --------------------------------------------------------
 
 plot_area= read_ops(file = "archimed_simulations/Control_EW_MAP.ops")$dimensions$area
-meteo= archimedR::import_meteo("archimed_simulations/output_MAP_12/sim (0.0;0.0) (9.21;15.952)/000001/meteo.csv")
+meteo= archimedR::import_meteo("archimed_simulations/meteo.csv")
 PAR_hour= meteo$`globalIrradiance (W/m2)`*0.48*meteo$timestep*10^-6
 PAR_day= sum(PAR_hour)
 
